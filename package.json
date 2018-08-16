@@ -23,7 +23,7 @@
     "ngb:test": "ng test ng-bootstrap --code-coverage --source-map false --progress false --watch false",
     "ngb:tdd": "ng test ng-bootstrap --source-map false",
     "ngb:build": "ng build ng-bootstrap --prod && yarn ngb:static",
-    "demo:serve": "ng serve demo --host 0.0.0.0",
+    "demo:serve": "ng serve demo --host 0.0.0.0 --disable-host-check",
     "demo:static": "gulp demo-generate-static",
     "demo:build": "gulp demo-generate-static && ng build demo --prod",
     "demo:deploy": "yarn demo:build && yarn demo:push",
@@ -38,7 +38,9 @@
     "url": "https://github.com/ng-bootstrap/ng-bootstrap/issues"
   },
   "homepage": "https://github.com/ng-bootstrap/ng-bootstrap#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node": "^8.9.0"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",
     "@angular-devkit/build-ng-packagr": "~0.7.0",
